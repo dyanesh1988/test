@@ -10,6 +10,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'aws s3 cp . s3://learningtojenkins --recursive --acl public-read'
+            }
+        }
+        stage('Setting Permission') {
+            steps {
                 sh 'aws s3 website s3://learningtojenkins/ --index-document index.html --error-document error.html'
             }
         }
