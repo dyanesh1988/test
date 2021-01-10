@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Setting Permission') {
             steps {
-                sh 'aws s3 website s3://learningtojenkins/ --index-document index.html --error-document error.html'
+                sh 'aws s3 website s3://acloudxpert.tk/ --index-document index.html --error-document error.html'
             }
         }
     }
