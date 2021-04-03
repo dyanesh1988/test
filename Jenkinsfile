@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pulling Code From SCM') {
             steps {
-                echo 'Pushing....'
+                echo 'Pulling....'
             }
         }
         stage('Deploy') {
